@@ -1,0 +1,63 @@
+/* Layout chính của thanh Nav */
+.navbar {
+  display: flex;
+  justify-content: center; /* Căn giữa container chính */
+  background-color: var(--color-surface-base);
+  border-bottom: 1px solid var(--color-border-base);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 64px; /* Chiều cao chuẩn cho Navbar */
+}
+
+/* Container giới hạn độ rộng để nội dung không bị tràn ra 2 mép màn hình lớn */
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-lg);
+}
+
+.navbar-brand {
+  text-decoration: none;
+  font-size: 1.25rem;              /* To hơn các link khác một chút */
+  font-weight: 800;                /* Đậm đà bản sắc */
+  color: var(--color-brand-primary); /* Dùng màu xanh thương hiệu đã tạo */
+  letter-spacing: -0.5px;          /* Ép các chữ lại gần nhau cho cảm giác hiện đại */
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease; /* Hiệu ứng nhẹ khi hover */
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);          /* Phóng to nhẹ khi di chuột vào */
+  color: var(--color-brand-hover);
+}
+/* Cụm link ở giữa */
+.navbar-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+/* Style cho các link chung */
+.navbar-link{
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  transition: color 0.2s ease;
+}
+
+.navbar-link:hover, .navbar-link.active {
+  color: var(--color-brand-primary);
+}
+
+/* Cụm Auth (Login/Signup) */
+.navbar-auth-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+

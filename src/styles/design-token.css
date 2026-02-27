@@ -1,0 +1,37 @@
+:root {
+  /* --- Color Tokens --- */
+  --color-brand-primary: #3b82f6;      /* Xanh dương hiện đại */
+  --color-brand-hover: #2563eb;
+  
+  --color-surface-base: #ffffff;      /* Nền trắng */
+  --color-surface-low: #f8fafc;       /* Nền xám nhạt cho Header/Sidebar */
+  
+  --color-text-primary: #1e293b;      /* Chữ đen chính */
+  --color-text-secondary: #64748b;    /* Chữ xám phụ */
+  
+  --color-border-base: #e2e8f0;       /* Màu đường kẻ */
+  --color-error: #ef4444;             /* Màu lỗi */
+
+  /* --- Spacing Tokens (Hệ thống 4px) --- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* --- Radius Tokens (Độ bo góc) --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* --- Typography Tokens --- */
+  --font-family-main: 'Inter', system-ui, sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2rem;
+  --font-size-sm: 0.875rem;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
