@@ -33,7 +33,7 @@ const ProductDetails:React.FC = () => {
                     <h1 className='product-detail-name'>{product.name}</h1>
                     <p className='product-detail-price'>{product.price}</p>
                     <p className='product-detail-description'>{product.description}</p>
-                    <button className='btn btn-primary' onClick={()=>addToCart(product.id)}>Add to cart</button>
+                    <button className='btn btn-primary' onClick={()=>addToCart(String(product.id))}>Add to cart</button>
                 </div>
             </div>
         </div>
