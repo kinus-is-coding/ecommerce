@@ -3,15 +3,18 @@ import Home from "./pages/Home";
 import Auth from "./pages/Auth";
 import Checkout from "./pages/Checkout";
 import AppLayout from "./layout/AppLayout";
+import { AuthProvider } from "./context/AuthContext";
 function App() {
   return(
-    <Routes>
-      <Route  element={<AppLayout />}>
-        <Route path="/"  element={<Home/>}/>
-        <Route path="/auth" element={<Auth/>}/>
-        <Route path="/checkout" element={<Checkout/>} />
-      </Route>
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route  element={<AppLayout />}>
+          <Route path="/"  element={<Home/>}/>
+          <Route path="/auth" element={<Auth/>}/>
+          <Route path="/checkout" element={<Checkout/>} />
+        </Route>
+      </Routes>
+    </AuthProvider>
   )
 }
 

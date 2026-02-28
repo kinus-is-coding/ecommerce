@@ -1,0 +1,117 @@
+.auth-page {
+  min-height: 100vh;
+  background-color: var(--color-surface-low); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-main);
+  
+}
+
+.auth-page .container {
+  width: 100%;
+  max-width: 440px; /* Độ rộng tiêu chuẩn cho form Auth */
+  padding: var(--spacing-md);
+}
+
+.auth-container {
+  background-color: var(--color-surface-base); /* Nền trắng */
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-base);
+}
+
+.auth-title {
+  font-size: var(--font-size-h1);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xl);
+  text-align: left;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg); 
+}
+.error-msg {
+  background-color: #fff1f2; 
+  color: var(--color-error);
+  
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(239, 68, 68, 0.2);   
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  
+
+  text-align: left;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+.form-label{
+    color: var(--color-text-primary);
+}
+.form-input {
+  padding: 12px var(--spacing-md);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border-base);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  background-color: var(--color-surface-base) !important; 
+  color: var(--color-text-primary) !important; /
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Glow nhẹ từ màu primary */
+}
+
+/* --- Style cho lỗi --- */
+.form-group span {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: var(--spacing-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-hover);
+}
+
+.auth-switch {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.auth-link {
+  color: var(--color-brand-primary);
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: var(--spacing-xs);
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: var(--color-brand-hover);
+  text-decoration: underline;
+}
