@@ -12,7 +12,7 @@ const Productcard: React.FC<{ item: Product }> = ({ item }) => {
             <p className='product-card-price'>{item.price}</p>
             <div className='product-card-action'>
               <NavLink className='btn btn-secondary' to={`/products/${item.id}`}>View details</NavLink>
-              <button className='btn btn-primary' onClick={()=>addToCart(item.id)}>Add to cart</button>
+              <button className='btn btn-primary' onClick={()=>addToCart(String(item.id))}>Add to cart</button>
             </div>
           </div>
         </div>
