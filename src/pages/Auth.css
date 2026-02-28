@@ -79,7 +79,7 @@
   font-weight: 500;
 }
 
-.btn-primary {
+.auth-form .btn-primary {
   background-color: var(--color-brand-primary);
   color: white;
   padding: 12px;

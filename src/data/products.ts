@@ -41,3 +41,8 @@ export const productsData: Product[] = [
     category: "Audio"
   }
 ];
+export const getProductById = (id: string | undefined) => {
+  if (!id) return undefined; 
+  
+  return productsData.find((p) => p.id === Number(id));
+}

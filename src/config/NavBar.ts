@@ -8,5 +8,6 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'Cart', path: '/checkout' },
+  
 
 ];

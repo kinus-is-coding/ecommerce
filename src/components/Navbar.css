@@ -59,5 +59,36 @@
   display: flex;
   gap: var(--spacing-sm);
   align-items: center;
+  
 }
 
+/* --- Style tối giản cho cụm User trên Navbar --- */
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.navbar-user span {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary); /* Để màu xám nhẹ cho tinh tế */
+}
+
+.navbar-user .btn-secondary {
+  padding: 5px var(--spacing-md);
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid var(--color-border-base);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+
+}
+
+.navbar-user .btn-secondary:hover {
+  background-color: var(--color-surface-low);
+  border-color: var(--color-text-secondary);
+}

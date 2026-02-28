@@ -1,0 +1,74 @@
+/* --- Trang Chi tiết Sản phẩm --- */
+.detail-page {
+  min-height: calc(100vh - 64px); /* Full màn hình trừ chiều cao Navbar */
+  background-color: var(--color-surface-base);
+  padding: var(--spacing-xl) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia 2 cột bằng nhau */
+  gap: var(--spacing-xl);
+  align-items: start;
+  background-color: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  /* Nếu bro muốn nó nổi bật hơn thì thêm shadow nhẹ */
+  /* box-shadow: var(--shadow-sm); */
+}
+
+/* --- Cột bên trái: Ảnh --- */
+.product-detail-img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-surface-low);
+}
+
+.product-detail-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-detail-img img:hover {
+  transform: scale(1.02); /* Hiệu ứng zoom nhẹ khi xem ảnh */
+}
+
+/* --- Cột bên phải: Nội dung --- */
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.product-detail-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.product-detail-price {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  color: var(--color-brand-primary); /* Giá tiền nổi bật với màu xanh */
+}
+
+.product-detail-description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Nút Add to Cart - Tận dụng class .btn-primary bro đã có */
+.product-detail-content .btn-primary {
+  width: fit-content;
+  padding: 12px var(--spacing-xl);
+  font-size: var(--font-size-base);
+}

@@ -9,6 +9,7 @@ interface AuthContextType {
   signup:(email:string, password:string)=>{success:boolean,error?:string};
   User:User|null;
   login:(email:string, password:string)=>{success:boolean,error?:string};
+  logout:()=>void
 }
 
 const AuthContext=createContext<AuthContextType|undefined>(undefined) 
@@ -42,8 +43,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setUser({email})
         return {success:true }
          
+        
     }
-    return <AuthContext.Provider value={{signup,login,User}}> 
+    function logout(){
+      localStorage.removeItem("currentemail")
+      setUser(null)
+    }
+    return <AuthContext.Provider value={{signup,login,User,logout}}> 
             {children}
            </AuthContext.Provider>
 }

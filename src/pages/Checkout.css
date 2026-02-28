@@ -1,0 +1,150 @@
+.checkout-page {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-surface-base);
+  min-height: 80vh;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 350px; /* Cột trái rộng, cột phải (Summary) cố định */
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.checkout-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
+}
+
+/* --- Danh sách Item --- */
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-base);
+}
+
+.checkout-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.checkout-item-content {
+  flex: 1; /* Chiếm khoảng trống ở giữa */
+}
+
+.checkout-item-name {
+  font-size: var(--font-size-base);
+  color: #333 !important;
+  margin-bottom: 4px;
+}
+
+.checkout-item-price {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* --- Bộ điều khiển số lượng --- */
+.checkout-item-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border-base);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  
+}
+
+.quantity-btn {
+  background: var(--color-surface-low);
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color:#333 !important;
+}
+
+.quantity-btn:hover {
+  background: var(--color-border-base);
+}
+
+.quantity-value {
+  padding: 0 var(--spacing-sm);
+  min-width: 30px;
+  text-align: center;
+  color:#333 !important;
+  font-weight: 600;
+}
+
+.checkout-item-total {
+  font-weight: 700;
+  min-width: 80px;
+  text-align: right;
+  color:#333 !important;
+}
+
+/* --- Cột Summary (Tổng tiền) --- */
+.checkout-summary {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-base);
+  position: sticky;
+  top: 100px; /* Cuộn trang thì nó vẫn dính ở đây */
+  right:10px
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--spacing-md) 0 var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 2px solid var(--color-surface-low);
+  color:#333 !important;
+}
+
+.checkout-total-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-brand-primary);
+}
+
+.checkout-summary .btn-primary {
+  width: 100%; /* Nút Place Order to bản */
+  padding: 12px;
+}
+.checkout-item .btn-secondary {
+  background-color: transparent; /* Xóa cái màu đen thùi lùi đi */
+  color: #ff4d4f;                /* Chữ màu đỏ hồng cho tinh tế */
+  border: 1px solid #ff4d4f;     /* Viền đỏ mảnh */
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.checkout-item .btn-secondary:hover {
+  background-color: #ff4d4f;     /* Khi di chuột vào thì đầy màu đỏ */
+  color: white !important;       /* Chữ chuyển sang trắng */
+  border-color: #ff4d4f;
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.2); /* Thêm tí shadow cho "nghệ" */
+}

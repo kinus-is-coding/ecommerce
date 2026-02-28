@@ -4,7 +4,7 @@ import Productcard from '../components/Productcard'
 import './Home.css'
 const Home: React.FC = () => {
   const products=productsData.map((item:Product)=>(
-    <Productcard item={item}/>
+    <Productcard item={item} key={item.id}/>
   ))
   
   return (
